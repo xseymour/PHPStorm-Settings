@@ -1,0 +1,33 @@
+<templateSet group="Bootstrap">
+  <template name="bstext" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$ID$&quot;&gt;$LABEL$:&lt;/label&gt;&#10;    &lt;input type=&quot;text&quot; name=&quot;$ID$&quot; class=&quot;form-control&quot; id=&quot;$ID$&quot; placeholder=&quot;$ID$&quot;&gt;&#10;&lt;/div&gt;" description="Bootstrap Text Form Input" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bstextsub" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$ID$&quot;&gt;:&lt;/label&gt;&#10;    &lt;input type=&quot;text&quot; name=&quot;$ID$&quot; class=&quot;form-control&quot; id=&quot;$ID$&quot; placeholder=&quot;$ID$&quot;&gt;&#10;    &lt;small id=&quot;$ID$Help&quot; class=&quot;form-text text-muted&quot;&gt;$SUB_MESSAGE$&lt;/small&gt;&#10;&lt;/div&gt;" description="Bootstrap Text Form Input with sub message" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SUB_MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bstextarea" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$ID$&quot;&gt;$LABEL$:&lt;/label&gt;&#10;    &lt;textarea name=&quot;$ID$&quot; class=&quot;form-control&quot; id=&quot;$ID$&quot; rows=&quot;3&quot; placeholder=&quot;$PLACEHOLDER$&quot;&gt;&lt;/textarea&gt;&#10;&lt;/div&gt;" description="Bootstrap Text Area Form Input" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PLACEHOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bssubmit" value="&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;" description="Bootstrap Submit Button" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

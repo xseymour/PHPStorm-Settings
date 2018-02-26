@@ -1,0 +1,297 @@
+<templateSet group="user">
+  <template name="if" value="if ($IF_CONDITION$) {&#10;    $END$&#10;}" shortcut="TAB" description="if w/ code conventions" toReformat="false" toShortenFQNames="true">
+    <variable name="IF_CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="else if" value="else if ($IF_CONDITION$) {&#10;    $END$&#10;}" shortcut="TAB" description="else if w/ code conventions" toReformat="false" toShortenFQNames="true">
+    <variable name="IF_CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="else" value="else {&#10;    $END$&#10;}" shortcut="TAB" description="else w/ code conventions" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="each" value="each( function(i, elem) {&#10;    $END$&#9;&#9;&#9;&#9;&#9;&#10;});" shortcut="TAB" description="jquery each" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="log" value="console.log( $END$ );" description="console.log" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$" value="$($END$)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tvt" value="die(var_dump($END$));" description="vardump and die" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tv" value="var_dump();" description="Vardump" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dd" value="dd($END$);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="try" value="try {&#10;    $END$&#10;}&#10;catch (Exception $ex) {&#10;    &#10;}" description="Try / Catch Block" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="@section" value="@section('$SECTION_NAME$')&#10;&#10;    $END$&#10;    &#10;@endsection" description="Produce a Blade Section" toReformat="false" toShortenFQNames="true">
+    <variable name="SECTION_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="PHP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="Twig" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="@foreach" value="@foreach($COLLECTION$ as $ITEM$)&#10;    $END$&#10;@endforeach" description="Produce a Blade foreach" toReformat="false" toShortenFQNames="true">
+    <variable name="COLLECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="@if" value="@if ($IF_STATEMENT$)&#10;    $END$&#10;@endif" description="Procude a Blade if" toReformat="false" toShortenFQNames="true">
+    <variable name="IF_STATEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="transaction" value="DB::beginTransaction();&#10;try{&#10;    $END$&#10;    DB::commit();    &#10;} catch (Exception $ex) {&#10;    DB::rollBack();&#10;}" description="DB Transaction skin for migrating safely" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="-" value="-&gt;$END$" description="PHP Accessor Symbol" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="vdd" value="die(var_dump($END$));" description="Expressly stated vardump and die (xdebug formatting)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="querylog" value="\DB::enableQueryLog();&#10;$END$&#10;dd(\DB::getQueryLog());" description="log laravel DB query" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="switch" value="switch ($VAR$) {&#10;    case $VAR_EQUALS$:&#10;        $END$&#10;        break;&#10;    default:&#10;        break;&#10;}" description="Switch Case in PHP/JS" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_EQUALS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dispatch" value="$REQUEST_NAME$  = Request::create( route('$ROUTE_NAME$', [$PARAMETERS$]), '$METHOD$' );&#10;$HTML_RESPONSE$ = Route::dispatch($REQUEST_NAME$)-&gt;getContent();" description="Create a Request and dispatch it" toReformat="false" toShortenFQNames="true">
+    <variable name="REQUEST_NAME" expression="" defaultValue="$request_name" alwaysStopAt="true" />
+    <variable name="ROUTE_NAME" expression="" defaultValue="Route.name" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="" defaultValue="$param_1, $param_2" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="GET" alwaysStopAt="true" />
+    <variable name="HTML_RESPONSE" expression="" defaultValue="$html" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xblock" value="&lt;!-- BEGIN: $BLOCK_NAME$ --&gt;&#10;$END$&#10;&lt;!-- END: $BLOCK_NAME$ --&gt;" description="Xblock" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOCK_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="DB::insert" value="DB::table('$TABLE$')-&gt;insert([&#10;    '$column$' =&gt; $value$,&#10;]);" description="Insert records into the database" toReformat="false" toShortenFQNames="true">
+    <variable name="TABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="column" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="route" value="Route::$METHOD$('$URL$', ['as' =&gt; '$INCODE$', 'uses' =&gt; '$CONTROL$'])" description="Fill a Route" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD" expression="capitalize()" defaultValue="GET" alwaysStopAt="false" />
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INCODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="time" value="$time1 = microtime(true);&#10;$SCRIPT$&#10;$time2 = microtime(true);&#10;dd('script execution time: ' . ($time2 - $time1)); //value in seconds);" description="Time script in seconds" toReformat="false" toShortenFQNames="true">
+    <variable name="SCRIPT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="stime" value="$time1 = microtime(true);" description="Start a Script Timer" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="etime" value="$time2 = microtime(true);&#10;dd('script execution time: ' . ($time2 - $time1)); //value in seconds);" description="end a script timer" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="call_user_func_array" value="call_user_func_array(['$CLASS$', '$METHOD$'], [$PARAMS$]);" description="Set up a user func call" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ddd" value="ddd($END$);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="test" value="/** @test */&#10;function $test_function_name$()&#10;{&#10;    $end$&#10;}" description="PHP Unit Test Function" toReformat="false" toShortenFQNames="true">
+    <variable name="test_function_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="phpunit" value="class $NAME$Test extends \PHPUnit_Framework_TestCase&#10;{&#10;&#10;    /**&#10;    * PHPUnit Setup function that is called before all assertions&#10;    */&#10;    public function setUp()&#10;    {&#10;        $end$&#10;    }&#10;    &#10;    /**&#10;    * @test&#10;    */&#10;    function a_test_function()&#10;    {&#10;    &#10;    }&#10;}" description="Create a PHP Unit Test Class" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="blade variables" value="{{--Mandatory Variables: --}}&#10;    &#10;{{--Optional Variables: --}}&#10;    &#10;{{--Usage Example: --}}&#10;    &#10;" description="Add blade partial variable descriptions" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="factoryc" value="factory($Model_Class$)-&gt;create($Overwritten_attributes$);" description="factory create method chain via model factories" toReformat="false" toShortenFQNames="true">
+    <variable name="Model_Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Overwritten_attributes" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="factorym" value="factory($Model_Class$)-&gt;make($Overwritten_attributes$);" description="factory make method chain via model factories" toReformat="false" toShortenFQNames="true">
+    <variable name="Model_Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Overwritten_attributes" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="foreignkeychecks" value="DB::statement('SET FOREIGN_KEY_CHECKS=0');&#10;DB::statement('SET FOREIGN_KEY_CHECKS=1');" description="disable and re-enable foreign key checks within migrations" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ng-controller-blade" value="angular.module('$exampleModule$', [], function($interpolateProvider) {&#10;            $interpolateProvider.startSymbol('&lt;%');&#10;            $interpolateProvider.endSymbol('%&gt;');&#10;        })&#10;            .controller('$ControllerName$', ['$scope', function ($scope) {&#10;                $scope.message = '';&#10;            }])" description="Create a new Controller with custom interpoate provider" toReformat="false" toShortenFQNames="true">
+    <variable name="exampleModule" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ControllerName" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="feature" value="&lt;?php&#10;&#10;namespace Tests\Feature;&#10;&#10;use Tests\DatabaseTestCase;&#10;&#10;class $classname$ extends DatabaseTestCase&#10;{&#10;    /** @test */&#10;    function $first_test$()&#10;    {&#10;        $END$&#10;    }&#10;}" description="Feature Test" toReformat="false" toShortenFQNames="true">
+    <variable name="classname" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="first_test" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="unit" value="&lt;?php&#10;&#10;namespace Tests\Unit;&#10;&#10;use Tests\DatabaseTestCase;&#10;&#10;class $classname$ extends DatabaseTestCase&#10;{&#10;    /** @test */&#10;    function $first_test$()&#10;    {&#10;        $END$&#10;    }&#10;}" description="Unit test" toReformat="false" toShortenFQNames="true">
+    <variable name="classname" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="first_test" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="errors" value="@if (count($errors))&#10;    &lt;ul class=&quot;alert alert-danger&quot;&gt;&#10;        @foreach($errors-&gt;all() as $error)&#10;            &lt;li&gt;{{$error}}&lt;/li&gt;&#10;        @endforeach&#10;    &lt;/ul&gt;&#10;@endif" description="Parse Validation errors in Blade" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+      <option name="PHP" value="false" />
+    </context>
+  </template>
+  <template name="lorem ipsum" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt &#10;ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco &#10;laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in &#10;voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat &#10;non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." description="lorem ipsum" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="vue component" value="&lt;template&gt;&#10;    $end$&#10;&lt;/template&gt;&#10;&lt;script&gt;&#10;    export default {&#10;        props : {&#10;            //required ---------------------&#10;            //title : { type:String, required:true },&#10;           &#10;            //optional ---------------------&#10;            //type : { type: String, required: false, default: 'normal' },&#10;        },&#10;        data() {&#10;            return {&#10;                property: 'Blank'&#10;            }&#10;        },&#10;        computed : {&#10;            propertyComputed() {&#10;                console.log('I change when this.property changes.')&#10;                return this.property&#10;            }&#10;        },&#10;        beforeCreate() {&#10;            console.log('Nothing gets called before me!')&#10;        },&#10;        // Use if: You need to fetch some data for your component on initialization. &#10;        // Use created (or created + activated for keep-alive components) for this instead, especially if you need that data during server-side rendering.&#10;        created() {&#10;            this.property = 'Example property update.'&#10;            console.log('propertyComputed will update, as this.property is now reactive.')&#10;        },&#10;        // Runs right before the initial render happens and after the template or render functions have been compiled. Most likely you’ll never need to use this hook.&#10;        beforeMount() {&#10;            console.log(`this.$el doesn't exist yet, but it will soon!`)&#10;        }&#10;        // Most Common Hook. Use if: You need to access or modify the DOM of your component immediately before or after the initial render.&#10;        // Grants full access to the reactive component, templates, and rendered DOM (via. this.$el).&#10;        mounted() {&#10;            console.log(this.$el.textContent) // I'm text inside the component.&#10;        },&#10;        methods : {&#10;            &#10;        }&#10;    }&#10;&lt;/script&gt;" description="Boilerplate for a vue component" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="plain jquery" value="var datatable_list = ['datatables.net', 'dt-b-col_vis', 'dt-colReorder', 'dt-responsive', 'dt-scroller'];&#10;require(['jquery'].concat(datatable_list), function($) {&#10;    // Variables ---------------------------------------------------------------&#10;    &#10;    &#10;    &#10;    //Preliminary Actions ------------------------------------------------------&#10;    &#10;    &#10;    &#10;    // Listeners ---------------------------------------------------------------&#10;    &#10;    &#10;    &#10;    // End: Listeners ----------------------------------------------------------&#10;    &#10;    // Page Acquisition --------------------------------------------------------&#10;    &#10;    &#10;    &#10;    // End: Page Acquisition ---------------------------------------------------&#10;    &#10;    // Actions -----------------------------------------------------------------&#10;    &#10;    &#10;    &#10;    // End: Actions ------------------------------------------------------------&#10;    &#10;    // Helper Functions --------------------------------------------------------&#10;    &#10;    &#10;    &#10;    // End: Helper Functions ---------------------------------------------------&#10;    &#10;})&#10;&#10;// Global Functions ------------------------------------------------------------&#10;&#10;&#10;// End: Global Functions -------------------------------------------------------" description="Structure of a jquery file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="plain php" value="// Inheirited --------------------------------------------------------------&#10;&#10;&#10;&#10;// Inheirited Helpers ---------------------------------&#10;&#10;&#10;&#10;// End: Inheirited Helpers ----------------------------&#10;&#10;// End: Inheirited ---------------------------------------------------------&#10;&#10;&#10;// Index -------------------------------------------------------------------&#10;&#10;// Page Retrieval -------------------------------------&#10;&#10;&#10;&#10;// End: Page Retrieval --------------------------------&#10;&#10;// Page Actions ---------------------------------------&#10;&#10;&#10;&#10;// End: Page Actions ----------------------------------&#10;&#10;// Helper Functions -----------------------------------&#10;&#10;&#10;&#10;// Helper Functions -----------------------------------&#10;&#10;// End: Index --------------------------------------------------------------&#10;&#10;// Edit --------------------------------------------------------------------&#10;&#10;// Page Retrieval -------------------------------------&#10;&#10;&#10;&#10;// End: Page Retrieval --------------------------------&#10;&#10;// Page Actions ---------------------------------------&#10;&#10;&#10;&#10;// End: Page Actions ----------------------------------&#10;&#10;// Helper Functions -----------------------------------&#10;&#10;&#10;&#10;// Helper Functions -----------------------------------&#10;&#10;// End: Edit ---------------------------------------------------------------" description="Stucture for a new php file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="$response" value="$response = JsonResponse::create(['success'=&gt; $END$]);" description="$response = JsonResponse::create(['success'=&gt; $END$]);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="foreign" value="$table-&gt;foreign('$foreign_key$')-&gt;references('$subject_key$')-&gt;on('$subject_table$')-&gt;onUpdate('$CAS_OR_RESTRICT_1$')-&gt;onDelete('$CAS_OR_RESTRICT_2$')" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="foreign_key" expression="" defaultValue="poop" alwaysStopAt="true" />
+    <variable name="subject_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="subject_table" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAS_OR_RESTRICT_1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAS_OR_RESTRICT_2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="@var" value="/** @var $Class$ $Var$ */" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="eloquent hooks" value="public static function boot()&#10;{&#10;    parent::boot();&#10;    static::updating(function ($model_var$) {&#10;        /** @var Model $model_var$*/&#10;        if ($model_var$-&gt;isDirty('o_oss_id')) {&#10;            $model_var$-&gt;status_updated_at = Carbon::now();&#10;        }&#10;    });&#10;}" description="Perform actions on Eloquent Model Hooks" toReformat="false" toShortenFQNames="true">
+    <variable name="model_var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="hdd" value="http_response_code(500);&#10;dd($END$);" description="dd with htpp error code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="seedViaMigration" value="if (Site::first() != null) {&#10;//Add to DatabaseSeeder.php as well&#10;    (new $SEEDER$())-&gt;run();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="SEEDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
